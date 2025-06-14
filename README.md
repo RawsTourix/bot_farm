@@ -48,16 +48,19 @@ graph LR
     C[веб-клиент] <--> D[веб-сервер]
     E[телеграмм-клиент] <--> F[телеграмм-сервер]
     
-    B <--> G["API (MCP-клиент)"]
+    B <--> G["Gateway (Шлюз)"]
     D <--> G
     F <--> G
+
+    G <--> H["API (MCP-клиент)"]
     
-    G <--> H[LLM]
-    H <--> I["боты (MCP-серверы)"]
+    H <--> I[LLM]
+    I <--> J["боты (MCP-серверы)"]
     
-    style G fill:#060,stroke:#333
-    style H fill:#404,stroke:#333
-    style I fill:#069,stroke:#333
+    style G fill:#c10,stroke:#333
+    style H fill:#060,stroke:#333
+    style I fill:#404,stroke:#333
+    style J fill:#069,stroke:#333
 ```
 
 ### Схема взаимодействия (Sequence Diagram)
